@@ -1,0 +1,37 @@
+﻿@using WebApplication73.Models.Entity
+@model List<User>
+@{
+				/**/
+
+				ViewBag.Title = "Index";
+				Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>personel Listesi</h2>
+
+<table class="table table-bordered">
+	<tr>
+		
+		<th>@Resources.Content.KullanıcıAdı</th>
+		<th>@Resources.Content.Şifre</th>
+		<th>@Resources.Content.Rol</th>
+
+
+	</tr>
+	<tbody>
+		@foreach (var regi in Model)
+		{
+			<tr>
+				<td>@regi.Username</td>
+				<td>@regi.Password</td>
+				<td>@regi.Role</td>
+				
+				<td><a href="/Register/Sil/@regi.UserId" class="btn btn-danger">@Resources.Content.Sil</a></td>
+				<td><a href="/Register/KisiGetir/@regi.UserId" class="btn btn-success">@Resources.Content.Güncelle</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<a href="/Register/YeniKisi/" class="btn btn-primary">@Resources.Content.YeniKişiEkle</a>
+

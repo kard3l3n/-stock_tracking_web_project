@@ -1,0 +1,25 @@
+﻿@model WebApplication73.Models.Entity.TBLMUSTERI
+@{
+	ViewBag.Title = "Guncelle";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Musteri", FormMethod.Post))
+{
+<div class="form-group">
+		@Resources.Content.MüşteriId
+		@Html.TextBoxFor(m => m.MUSTERIID, new { @class = "form-control" })
+		<br />
+		@Resources.Content.MüşteriAd
+		@Html.TextBoxFor(m => m.MUSTERIAD, new { @class = "form-control" })
+		<br />
+		@Resources.Content.MüşteriSoyad
+		@Html.TextBoxFor(m => m.MUSTERISOYAD, new { @class = "form-control" })
+
+
+</div>
+	<div>
+		<button class="btn btn-warning">@Resources.Content.Güncelle</button>
+	</div>
+}
+

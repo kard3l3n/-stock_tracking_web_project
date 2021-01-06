@@ -1,0 +1,30 @@
+﻿
+@{
+	ViewBag.Title = "YeniKisi";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+	<div>
+		<label>@Resources.Content.KullanıcıAdı</label>
+		<input type="text" class="form-control" name="Username" />
+	</div>
+
+	<div>
+		<label>@Resources.Content.Şifre</label>
+		<input type="text" class="form-control" name="Password" />
+	</div>
+
+	<div>
+		<label>@Resources.Content.Rol</label>
+		<input type="text" class="form-control" name="Role" />
+	</div>
+
+
+
+	<div>
+		<button class="btn btn-info">@Resources.Content.Ekle</button>
+	</div>
+
+
+</form>

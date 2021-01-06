@@ -1,0 +1,27 @@
+﻿@model WebApplication73.Models.Entity.TBLURUNLER
+@{
+	ViewBag.Title = "YeniRoom";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+	<div>
+	    <label>@Resources.Content.ÜrünAd</label>
+		<input type="text" class="form-control" name="URUNAD" />
+	</div><br />
+	<div>
+		<label>@Resources.Content.ÜrünKategori</label>
+		@Html.DropDownListFor(m=>m.TBLKATEGORI.KATEGORIID,(List<SelectListItem>)ViewBag.dgr,new { @class="form-control" }) 
+	</div><br />
+	<div>
+		<label>@Resources.Content.ÜrünFiyat</label>
+		<input type="text" class="form-control" name="URUNFIYAT" />
+	</div>
+	<br />
+	
+	<div>
+		<button class="btn btn-info">@Resources.Content.Ekle</button>
+	</div>
+
+</form>
+

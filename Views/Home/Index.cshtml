@@ -1,0 +1,33 @@
+﻿@using WebApplication73.Models.Entity
+@model List<TBLURUNLER>
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+	<tr>
+		<th>Id</th>
+		<th>@Resources.Content.Ürün</th>
+		<th>@Resources.Content.Kategori</th>
+		<th>@Resources.Content.Fiyat</th>
+	
+	</tr>
+	<tbody>
+		@foreach (var urn in Model)
+		{
+			<tr>
+				<td>@urn.URUNID</td>
+				<td>@urn.URUNAD</td>
+				<td>@urn.URUNKATEGORI</td>
+				<td>@urn.URUNFIYAT</td>
+				<td><a href="/Home/Sil/@urn.URUNID" class="btn btn-danger">@Resources.Content.Sil</a></td>
+				<td><a href="/Home/UrunGetir/@urn.URUNID" class="btn btn-success">@Resources.Content.Güncelle</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<a href="/Home/YeniUrun/" class="btn btn-primary">@Resources.Content.YeniÜrünEkle</a>
+
+

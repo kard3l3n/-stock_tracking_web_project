@@ -1,0 +1,22 @@
+﻿@{
+	ViewBag.Title = "YeniRoom";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+	
+	<div>
+		<label>@Resources.Content.MüşteriAd</label>
+		<input type="text" class="form-control" name="MUSTERIAD" />
+	</div><br />
+	<div>
+		<label>@Resources.Content.MüşteriSoyad</label>
+		<input type="text" class="form-control" name="MUSTERISOYAD" />
+	</div><br />
+
+	<div>
+		<button class="btn btn-info">@Resources.Content.Ekle</button>
+	</div>
+
+</form>
+

@@ -1,0 +1,30 @@
+﻿@using WebApplication73.Models.Entity
+@model List<TBLKATEGORI>
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+	<tr>
+		<th>Id</th>
+		<th>@Resources.Content.KategoriAd</th>
+		
+
+	</tr>
+	<tbody>
+		@foreach (var ktgr in Model)
+		{
+			<tr>
+				<td>@ktgr.KATEGORIID</td>
+				<td>@ktgr.KATEGORIAD</td>
+				<td><a href="/Kategori/Sil/@ktgr.KATEGORIID" class="btn btn-danger">@Resources.Content.Sil</a></td>
+				<td><a href="/Kategori/KategoriGetir/@ktgr.KATEGORIID" class="btn btn-success">@Resources.Content.Güncelle</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<a href="/Kategori/YeniUrun/" class="btn btn-primary">@Resources.Content.YeniKategoriEkle</a>
+
+

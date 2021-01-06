@@ -1,0 +1,29 @@
+﻿@model WebApplication73.Models.Entity.User
+@{
+	ViewBag.Title = "KisiGetir";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Register", FormMethod.Post))
+{
+<div class="form-group">
+	@Resources.Content.KullanıcıId
+	@Html.TextBoxFor(m => m.UserId, new { @class = "form-control" })
+	<br />
+	@Resources.Content.KullanıcıAdı
+	@Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+	<br />
+	@Resources.Content.Şifre
+	@Html.TextBoxFor(m => m.Password, new { @class = "form-control" })
+	<br />
+	@Resources.Content.Rol
+	@Html.TextBoxFor(m => m.Role, new { @class = "form-control" })
+
+
+</div>
+	<div>
+		<button class="btn btn-warning">@Resources.Content.Güncelle</button>
+	</div>
+}
+
+
